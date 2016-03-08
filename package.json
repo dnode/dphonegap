@@ -1,7 +1,7 @@
 {
   "name": "dphonegap",
   "description": "Copy the files defined in the 'phonegap.json' of the dependency into the '../' directory",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "http://github.com/dnode/dphonegap",
   "license": "MIT",
   "readmeFilename": "README.md",
