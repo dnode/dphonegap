@@ -11,8 +11,7 @@ module.exports = (config) => {
   }
   let path = config.project.relativePath + '/' + config.dependency.phonegap.index;
   let replace = config.project.phonegap.javascripts
-    .map((javascript) => { return '<script src="' + javascript + '"></script>'; })
-    .push('</body>')
-    .join("\n");
-  fs.writeFileSync(path, fs.readFileSync(path, 'utf8').replace('</body>', replace));
+    .map((javascript) => { return '<script src="' + javascript + '"></script>'; });
+  replace.push('</body>');
+  fs.writeFileSync(path, fs.readFileSync(path, 'utf8').replace('</body>', replace.join("\n")));
 };

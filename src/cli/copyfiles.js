@@ -17,7 +17,7 @@ module.exports = (config, callback) => {
   paths.push(config.project.relativePath + '/');
   copyfiles(paths, config.dependency.relativePath.split('/').length, (err) => {
     if (err) {
-      console.err(err);
+      console.log(err);
       return;
     }
     callback();

@@ -22,7 +22,11 @@ module.exports = (config) => {
           width: format.width,
           height: format.height
         },
-        (err) => { console.err(err); }
+        (err) => {
+          if (err) {
+            console.log(err);
+          }
+        }
     );
   }
 };
