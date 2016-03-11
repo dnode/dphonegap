@@ -2,12 +2,10 @@
 'use strict';
 
 let config = { dependency: {}, project: {} };
-config.dependency.relativePath = 'node_modules/' + process.argv[2];
-config.dependency.absolutePath = process.cwd() + '/' + config.dependency.relativePath;
-config.dependency.phonegap = require(config.dependency.absolutePath + '/phonegap.json');
-config.project.relativePath = '..';
-config.project.absolutePath = process.cwd() + '/' + config.project.relativePath;
-config.project.phonegap = require(config.project.absolutePath + '/dphonegap/phonegap.json');
+config.dependency.path = 'node_modules/' + process.argv[2];
+config.dependency.dphonegap = require(process.cwd() + '/' + config.dependency.path + '/dphonegap.json');
+config.project.path = '..';
+config.project.dphonegap = require(process.cwd() + '/' + config.project.path + '/dphonegap/dphonegap.json');
 
 require('./cli/copyfiles.js')(
   config,

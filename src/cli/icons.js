@@ -1,32 +1,22 @@
 'use strict';
 
-const mkdirp = require('mkdirp');
-const im = require('imagemagick');
-const path = require('path');
+const dlogos = require('dlogos');
 
 module.exports = (config) => {
-  if (!config.dependency.phonegap.icon) {
+  if (!config.dependency.dphonegap.logo) {
     return;
   }
-  if (!config.project.phonegap.icons) {
+  if (!config.project.dphonegap.icons) {
     return;
   }
-  let source = config.dependency.absolutePath + '/' + config.dependency.phonegap.icon;
-  let directory = config.project.absolutePath + '/' + config.project.phonegap.icons.path;
-  for (let format of config.project.phonegap.icons.formats) {
-    mkdirp.sync(directory + '/' + path.dirname(format.destination));
-    im.resize(
-        {
-          srcPath: source,
-          dstPath: directory + '/' + format.destination,
-          width: format.width,
-          height: format.height
-        },
-        (err) => {
-          if (err) {
-            console.log(err);
-          }
-        }
-    );
+  let destinations = [];
+  for (let destination of config.project.dphonegap.icons.destinations) {
+    destinations.push({
+      path: config.project.path + '/' + config.project.dphonegap.icons.path + '/' + destination.path,
+      width: destination.width,
+      height: destination.height
+    });
   }
+  let source = config.dependency.path + '/' + config.dependency.dphonegap.logo;
+  dlogos([{ source, destinations }]);
 };

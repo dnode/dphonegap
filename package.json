@@ -1,7 +1,7 @@
 {
   "name": "dphonegap",
-  "description": "Prepare a project for a PhoneGap build by copy files, inject javascript tags and resize the icon for all platforms",
-  "version": "3.0.1",
+  "description": "Prepare a project for a PhoneGap build by copy files, inject javascript tags and resize the logo for all platform icons",
+  "version": "4.0.0",
   "homepage": "http://github.com/dnode/dphonegap",
   "license": "MIT",
   "readmeFilename": "README.md",
@@ -10,8 +10,7 @@
   },
   "dependencies": {
     "copyfiles": "^0.2.1",
-    "imagemagick": "^0.1.3",
-    "mkdirp": "^0.5.1"
+    "dlogos": "^1.0.0"
   },
   "repository": {
     "type": "git",

@@ -2,14 +2,14 @@
 [![devDependency Status](https://david-dm.org/dnode/dphonegap/dev-status.svg)](https://david-dm.org/dnode/dphonegap#info=devDependencies)
 
 # Example
-## phonegap.json (dependency)
+## dphonegap.json (dependency)
 ```json
 {
   "copyfiles": [
     "..."
   ],
-  "icon": "res/icon.png",
-  "index": "www/index.html"
+  "index": "www/index.html",
+  "logo": "..."
 }
 ```
 ## package.json (project)
@@ -23,7 +23,7 @@
   }
 }
 ```
-## phonegap.json (project)
+## dphonegap.json (project)
 ```json
 {
   "javascripts": [
@@ -31,8 +31,8 @@
   ],
   "icons": {
     "path": "res/icon",
-    "formats": [
-      { "destination": "...", "width": ..., "height": ... }
+    "destinations": [
+      { "path": "...", "width": ... }
     ]
   }
 }
