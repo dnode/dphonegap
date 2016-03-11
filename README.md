@@ -32,7 +32,7 @@
   "icons": {
     "path": "res/icon",
     "destinations": [
-      { "path": "...", "width": ... }
+      { "path": "...", "width": "..." }
     ]
   }
 }
