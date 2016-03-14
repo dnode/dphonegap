@@ -9,14 +9,9 @@ module.exports = (config) => {
   if (!config.project.dphonegap.icons) {
     return;
   }
-  let destinations = [];
-  for (let destination of config.project.dphonegap.icons.destinations) {
-    destinations.push({
-      path: config.project.path + '/' + config.project.dphonegap.icons.path + '/' + destination.path,
-      width: destination.width,
-      height: destination.height
-    });
-  }
-  let source = config.dependency.path + '/' + config.dependency.dphonegap.logo;
-  dlogos([{ source, destinations }]);
+  dlogos([{
+    source: config.dependency.path + '/' + config.dependency.dphonegap.logo,
+    path: config.project.path + '/' + config.project.dphonegap.icons.path,
+    destinations: config.project.dphonegap.icons.destinations
+  }]);
 };
