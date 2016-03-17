@@ -8,8 +8,7 @@
   "copyfiles": [
     "..."
   ],
-  "index": "www/index.html",
-  "logo": "..."
+  "index": "www/index.html"
 }
 ```
 ## package.json (project)
@@ -27,13 +26,8 @@
 ```json
 {
   "javascripts": [
-    "cordova.js"
-  ],
-  "icons": {
-    "path": "res/icon",
-    "destinations": [
-      { "path": "...", "width": "..." }
-    ]
-  }
+    "cordova.js",
+    "app-cordova.js"
+  ]
 }
 ```

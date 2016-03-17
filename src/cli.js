@@ -11,4 +11,3 @@ require('./cli/copyfiles.js')(
   config,
   () => { require('./cli/javascripts.js')(config); }
 );
-require('./cli/icons.js')(config);
