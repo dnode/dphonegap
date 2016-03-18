@@ -13,7 +13,7 @@ module.exports = (config, callback) => {
   if (paths.length == 0) {
     return;
   }
-  paths = paths.map((copyfile) => { return config.dependency.path + '/' + copyfile; });
+  paths = paths.map((path) => { return config.dependency.path + '/' + path; });
   paths.push(config.project.path + '/');
   copyfiles(paths, config.dependency.path.split('/').length, (err) => {
     if (err) {
