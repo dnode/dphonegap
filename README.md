@@ -8,7 +8,7 @@
   "copyfiles": [
     "..."
   ],
-  "index": "www/index.html"
+  "index": "..."
 }
 ```
 ## package.json (project)
@@ -25,9 +25,6 @@
 ## dphonegap.json (project)
 ```json
 {
-  "javascripts": [
-    "cordova.js",
-    "app-cordova.js"
-  ]
+  "javascripts": [ "cordova.js" ]
 }
 ```
