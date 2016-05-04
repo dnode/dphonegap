@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 'use strict';
 
-let config = { dependency: {}, project: {} };
+const config = { dependency: {}, project: {} };
 config.dependency.path = 'node_modules/' + process.argv[2];
 config.dependency.dphonegap = require(process.cwd() + '/' + config.dependency.path + '/dphonegap.json');
 config.project.path = '..';
