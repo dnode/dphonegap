@@ -1,7 +1,7 @@
 {
   "name": "dphonegap",
   "description": "Prepare a project for a PhoneGap build by copy files and inject javascript tags into the index file",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "homepage": "http://github.com/dnode/dphonegap",
   "license": "MIT",
   "readmeFilename": "README.md",
@@ -9,7 +9,7 @@
     "dphonegap": "src/cli.js"
   },
   "dependencies": {
-    "copyfiles": "^0.2.1"
+    "copyfiles": "^1.0.0"
   },
   "repository": {
     "type": "git",
